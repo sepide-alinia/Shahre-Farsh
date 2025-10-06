@@ -1,15 +1,11 @@
 import signupCover from "../../assets/images/signupCovre.png";
-import { MdOutlineRemoveRedEye } from "react-icons/md";
-import { IoEyeOffOutline } from "react-icons/io5";
 import { MdKey } from "react-icons/md";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
-import Input from "../../components/input";
-import { useState } from "react";
+import Input from "../../components/Input";
 
 export default function SignUp() {
 
-  const [hidden,setHidden] =useState<boolean>(true)
 
   return (
     <div className="flex h-screen ">
@@ -30,8 +26,8 @@ export default function SignUp() {
           <form action="#" className="flex flex-col">
             <Input inputType="text"  placeholder="نام" icon={FaUser }/>
             <Input inputType="text"  placeholder="خانوادگی" icon={FaUser}/>
-            <Input inputType="password" hidden={hidden} setHidden={setHidden} eye={ hidden? IoEyeOffOutline : MdOutlineRemoveRedEye} placeholder="ساخت رمز عبور" icon={MdKey}/>
-            <Input inputType="password" hidden={hidden} setHidden={setHidden} eye={ hidden? IoEyeOffOutline : MdOutlineRemoveRedEye} placeholder="تایید رمز عبور" icon={MdKey}/>
+            <Input inputType="password" placeholder="ساخت رمز عبور" icon={MdKey}/>
+            <Input inputType="password" placeholder="تایید رمز عبور" icon={MdKey}/>
             <Input inputType="password"  placeholder='شماره تماس' icon={FaPhoneFlip}/>
           
             <button className="text-white bg-darkRed rounded-xl text-center py-2 mt-5 hover:cursor-pointer hover:bg-darkRed">
