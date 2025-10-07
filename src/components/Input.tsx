@@ -39,7 +39,10 @@ export default function Input({
           " w-[86%] bg-amber-400my-3 py-2 px-1 text-right  outline-none " :
           " w-[93%] bg-amber-400my-3 py-2 px-1 text-right  outline-none "
         }
-        type={inputType}
+        type={Hide &&
+        Show ? (hidden? 'tel' : 'password') :
+          inputType
+        }
         placeholder={placeholder}
       />
       <Icon className=" w-4 h-3 mr-3 fill-placeHolder" />

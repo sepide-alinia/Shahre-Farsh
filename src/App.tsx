@@ -1,13 +1,14 @@
-
+import routs from './Routs/routs'
 import './App.css'
-import SignUp from './pages/signUp/SignUp'
 
+import { useRoutes} from 'react-router-dom'
 function App() {
 
+let router = useRoutes(routs)
 
   return (
     <>
-      <SignUp/>
+     {router}
     </>
   )
 }
