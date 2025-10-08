@@ -18,7 +18,9 @@
     --color-darkRed: #CB1B1B;
     --color-darkRed-500: #9E1515;
     --color-placeHolder: #505050;
-    --color-inputBorder: #CBCBCB
+    --color-inputBorder: #CBCBCB;
+    --color-searchInput: #EDEDED;
+    --radius-input : 12px
 }
 
 @import "tailwindcss";

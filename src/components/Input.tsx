@@ -4,22 +4,22 @@ import { useState } from "react";
 type InputProps = {
   inputType: string;
   placeholder: string;
-  icon: React.ElementType;
-  show?: React.ElementType;
-  hide?: React.ElementType;
+  Icon: React.ElementType;
+  Show?: React.ElementType;
+  Hide?: React.ElementType;
 };
 
 export default function Input({
   inputType,
   placeholder,
-  icon: Icon,
-  show: Show,
-  hide: Hide,
+  Icon,
+  Show,
+  Hide,
 }: InputProps) {
   const [hidden, setHidden] = useState<boolean>(true);
 
   return (
-    <div className=" group  flex items-center border mt-4 border-inputBorder focus-within:border-darkRed rounded-xl">
+    <div className=" group  flex items-center border mt-4 border-inputBorder focus-within:border-darkRed rounded-input">
       {Hide &&
         Show &&
         (hidden ? (
@@ -35,14 +35,11 @@ export default function Input({
         ))}
       <input
         className={
-          Hide && Show ?
-          " w-[86%] bg-amber-400my-3 py-2 px-1 text-right  outline-none " :
-          " w-[93%] bg-amber-400my-3 py-2 px-1 text-right  outline-none "
+          Hide && Show
+            ? " w-[86%] bg-amber-400my-3 py-2 px-1 text-right  outline-none "
+            : " w-[93%] bg-amber-400my-3 py-2 px-1 text-right  outline-none "
         }
-        type={Hide &&
-        Show ? (hidden? 'tel' : 'password') :
-          inputType
-        }
+        type={Hide && Show ? (hidden ? "tel" : "password") : inputType}
         placeholder={placeholder}
       />
       <Icon className=" w-4 h-3 mr-3 fill-placeHolder" />

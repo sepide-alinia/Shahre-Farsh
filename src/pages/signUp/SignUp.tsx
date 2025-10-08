@@ -1,33 +1,29 @@
-import { MdKey } from "react-icons/md";
-import { FaPhoneFlip } from "react-icons/fa6";
-import { FaUser } from "react-icons/fa";
-import Input from "../../components/Input";
-import { MdOutlineRemoveRedEye } from "react-icons/md";
-import { IoEyeOffOutline } from "react-icons/io5";
+import {key,closedEye,openEye,user,phone} from '@/assets/icons'
+import Input from "@/components/Input";
 import { Link } from "react-router-dom";
-import Button from "../../components/Button";
-import AuthLayout from "../../layout/AuthLayout";
+import Button from "@/components/Button";
+import AuthLayout from "@/layout/AuthLayout";
 export default function SignUp() {
   return (
     <AuthLayout>
       <form action="#" className="flex flex-col">
-        <Input inputType="text" placeholder="نام" icon={FaUser} />
-        <Input inputType="text" placeholder="خانوادگی" icon={FaUser} />
+        <Input inputType="text" placeholder="نام" Icon={user} />
+        <Input inputType="text" placeholder="خانوادگی" Icon={user} />
         <Input
           inputType="password"
           placeholder="ساخت رمز عبور"
-          icon={MdKey}
-          hide={MdOutlineRemoveRedEye}
-          show={IoEyeOffOutline}
+          Icon={key}
+          Hide={closedEye}
+          Show={openEye}
         />
         <Input
           inputType="password"
           placeholder="تایید رمز عبور"
-          icon={MdKey}
-          hide={MdOutlineRemoveRedEye}
-          show={IoEyeOffOutline}
+          Icon={key}
+          Hide={closedEye}
+          Show={openEye}
         />
-        <Input inputType="text" placeholder="شماره تماس" icon={FaPhoneFlip} />
+        <Input inputType="text" placeholder="شماره تماس" Icon={phone} />
 
         <Button>ساخت حساب کاربری</Button>
       </form>
