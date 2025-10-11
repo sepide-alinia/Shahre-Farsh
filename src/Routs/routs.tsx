@@ -4,6 +4,7 @@ import HomePage from "../pages/homePage/HomePage"
 import AboutUs from "@/pages/aboutUs/AboutUs"
 import ContactUs from "@/pages/contactUs/ContactUs"
 import Weblog from "@/pages/weblog/Weblog"
+import ShoppingCart from "@/pages/shoppingCart/ShoppingCart"
 
 const routs = [
     {path:'/', element: <HomePage/>},
@@ -12,6 +13,7 @@ const routs = [
     {path:'/About', element: <AboutUs/>},
     {path:'/Contact', element: <ContactUs/>},
     {path:'/Weblog', element: <Weblog/>},
+    {path:'/Shopping', element: <ShoppingCart/>},
 ]
 
 export default routs

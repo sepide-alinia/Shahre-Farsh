@@ -1,27 +1,30 @@
-
-@font-face {
-    font-family: rokh-med ;
-    src: url(../src/assets/fonts/RokhNoEng-Medium.woff2);
-}
-
-
-@font-face {
-    font-family: rokh-bold ;
-    src: url(../src/assets/fonts/RokhNoEng-Bold.woff2);
-}
-
-*{
-    font-family: rokh-med
-}
-
-@theme{
-    --color-darkRed: #CB1B1B;
-    --color-darkRed-500: #9E1515;
-    --color-placeHolder: #505050;
-    --color-inputBorder: #CBCBCB;
-    --color-searchInput: #EDEDED;
-    --radius-input : 12px
-}
-
 @import "tailwindcss";
 
+@font-face {
+  font-family: rokh-med;
+  src: url(../src/assets/fonts/RokhNoEng-Medium.woff2);
+}
+
+@font-face {
+  font-family: rokh-bold;
+  src: url(../src/assets/fonts/RokhNoEng-Bold.woff2);
+}
+
+@theme {
+  --color-darkRed: #cb1b1b;
+  --color-darkRed-500: #9e1515;
+  --color-placeHolder: #505050;
+  --color-inputBorder: #cbcbcb;
+  --color-searchInput: #ededed;
+  --radius-input: 12px;
+}
+
+* {
+  font-family: rokh-med;
+}
+
+.redBtn {
+  color: white;
+  background-color: #cb1b1b;
+  font-weight: 400;
+}
