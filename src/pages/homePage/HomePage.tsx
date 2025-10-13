@@ -4,6 +4,7 @@ import carpet from "@/assets/images/carpet.png";
 import arrow from "@/assets/images/arrow.png";
 import PromoSection from "@/components/PromoSection";
 import CategoryGrid from "@/components/CategoryGrid";
+import ProductSection from "@/components/ProductSection";
 
 export default function HomePage() {
 
@@ -31,6 +32,7 @@ export default function HomePage() {
             secondaryBtn={{toPage: "/" , text: 'محصولات ویژه ایرانی فرش'}}
           />
           <CategoryGrid />
+          <ProductSection/>
         </>
       </MainLayout>
     </div>
