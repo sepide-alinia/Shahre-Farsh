@@ -1,4 +1,5 @@
-import MainNavbar from '@/components/MainNavbar'
+import React from 'react'
+import MainNavbar from '@/components/mainNavbar'
 import MainLayout from '@/layout/MainLayout'
 
 export default function AboutUs() {

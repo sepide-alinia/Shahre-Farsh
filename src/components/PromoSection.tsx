@@ -12,7 +12,7 @@ primaryBtn :{
     extraClass: string;
     text: string;
 }
-secondryBtn? :{
+secondaryBtn? :{
     toPage: string;
     extraClass?: string;
     text: string;
@@ -20,7 +20,7 @@ secondryBtn? :{
 }
 
 
-export default function PromoSection({src,arrow,title,highlight,description,primaryBtn,secondryBtn}:PromoSectionPropsType) {
+export default function PromoSection({src,arrow,title,highlight,description,primaryBtn,secondaryBtn}:PromoSectionPropsType) {
   return (
 
    <div className="flex h-11/12 w-full mt-24 ">
@@ -30,12 +30,12 @@ export default function PromoSection({src,arrow,title,highlight,description,prim
              <img
              src={arrow}
              alt="arrow"
-             className="absolute left-7 bottom-40"
+             className="absolute left-7 bottom-75"
              />
             } 
             </div>
 
-            <div className="h-full w-1/2 text-center pt-20">
+            <div className=" h-full w-1/2 text-center pt-20">
               <h1 className="font-bold text-[40px]">
                {title}{" "}
                 <span className="text-darkRed">{highlight}</span>
@@ -46,8 +46,8 @@ export default function PromoSection({src,arrow,title,highlight,description,prim
 
               <div className="flex justify-center gap-10 h-14 mt-16">
                 <MainButton toPage={primaryBtn.toPage} extraClass={primaryBtn.extraClass}>{primaryBtn.text}</MainButton>
-                {secondryBtn && (
-                  <MainButton toPage={secondryBtn?.toPage} >{secondryBtn?.text}</MainButton>
+                {secondaryBtn && (
+                <MainButton toPage={secondaryBtn.toPage} >{secondaryBtn?.text}</MainButton>
                 )}
               </div>
             </div>
