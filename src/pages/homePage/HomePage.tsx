@@ -2,8 +2,8 @@ import MainNavbar from "@/components/MainNavbar";
 import MainLayout from "@/layout/MainLayout";
 import carpet from "@/assets/images/carpet.png";
 import arrow from "@/assets/images/arrow.png";
-import MainButton from "@/components/MainButton";
 import PromoSection from "@/components/PromoSection";
+import ProductSection from "@/components/ProductSection";
 export default function HomePage() {
   return (
     <div>
@@ -19,6 +19,7 @@ export default function HomePage() {
             primaryBtn={{toPage: "/SignUp", extraClass: 'redBtn' , text: 'عضویت در باشگاه مشتریان'}}
             secondryBtn={{toPage: "/SignUp" , text: 'محصولات ویژه ایرانی فرش'}}
           />
+          <ProductSection/>
         </>
       </MainLayout>
     </div>

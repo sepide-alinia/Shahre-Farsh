@@ -1,5 +1,5 @@
 import React from "react";
-import SigninTitle from "../components/signinTitle/SigninTitle";
+import SigninTitle from "../components/SigninTitle";
 import signupCover from "../assets/images/signupCovre.png";
 
 export default function SignupSignInLayout({

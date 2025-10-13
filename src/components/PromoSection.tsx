@@ -35,7 +35,7 @@ export default function PromoSection({src,arrow,title,highlight,description,prim
             } 
             </div>
 
-            <div className="bg-amber-200 h-full w-1/2 text-center pt-20">
+            <div className="h-full w-1/2 text-center pt-20">
               <h1 className="font-bold text-[40px]">
                {title}{" "}
                 <span className="text-darkRed">{highlight}</span>
@@ -46,7 +46,9 @@ export default function PromoSection({src,arrow,title,highlight,description,prim
 
               <div className="flex justify-center gap-10 h-14 mt-16">
                 <MainButton toPage={primaryBtn.toPage} extraClass={primaryBtn.extraClass}>{primaryBtn.text}</MainButton>
-                <MainButton toPage={secondryBtn?.toPage} >{secondryBtn?.text}</MainButton>
+                {secondryBtn && (
+                  <MainButton toPage={secondryBtn?.toPage} >{secondryBtn?.text}</MainButton>
+                )}
               </div>
             </div>
 
