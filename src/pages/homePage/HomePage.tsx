@@ -5,6 +5,11 @@ import arrow from "@/assets/images/arrow.png";
 import PromoSection from "@/components/PromoSection";
 import CategoryGrid from "@/components/CategoryGrid";
 import ProductSection from "@/components/ProductSection";
+import {productSectionItems1 as Product1Data}  from "@/data/productData"
+import {productSectionItems2 as Product2Data}  from "@/data/productData"
+import {category1Data}  from "@/data/CategoryData"
+import {category2Data}  from "@/data/CategoryData"
+import { useState } from "react";
 
 export default function HomePage() {
 
@@ -16,6 +21,11 @@ export default function HomePage() {
   //   {id:3 , bg: '' , label: '' , buttonText:''},
   //   {id:4 , bg: '' , label: '' , buttonText:''},
   // ]
+
+const [ProductData1] = useState(Product1Data)
+const [ProductData2] = useState(Product2Data)
+const [CategoryData1] = useState(category1Data)
+const [CategoryData2] = useState(category2Data)
 
   return (
     <div>
@@ -31,8 +41,12 @@ export default function HomePage() {
             primaryBtn={{toPage: "/SignUp", extraClass: 'redBtn' , text: 'عضویت در باشگاه مشتریان'}}
             secondaryBtn={{toPage: "/" , text: 'محصولات ویژه ایرانی فرش'}}
           />
-          <CategoryGrid />
-          <ProductSection/>
+          <CategoryGrid data={CategoryData1}/>
+          <ProductSection data={ProductData1}/>
+          <CategoryGrid data={CategoryData2}/>
+          <ProductSection data={ProductData2}/>
+
+
         </>
       </MainLayout>
     </div>
