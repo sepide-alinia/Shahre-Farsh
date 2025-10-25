@@ -17,3 +17,21 @@ export type Product1 = {
 };
 
 export type Product1Type = Product1[];
+
+export type PromoSectionPropsType ={
+src:string;
+arrow?:string;
+title: string;
+highlight: string;
+description: string;
+primaryBtn :{
+    toPage: string;
+    extraClass?: string;
+    text: string;
+}
+secondaryBtn? :{
+    toPage: string;
+    extraClass?: string;
+    text: string;
+}
+}

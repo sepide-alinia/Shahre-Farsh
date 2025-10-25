@@ -1,31 +1,15 @@
 
 import MainButton from "./MainButton"
 
-type PromoSectionPropsType ={
-src:string;
-arrow?:string;
-title: string;
-highlight: string;
-description: string;
-primaryBtn :{
-    toPage: string;
-    extraClass: string;
-    text: string;
-}
-secondaryBtn? :{
-    toPage: string;
-    extraClass?: string;
-    text: string;
-}
-}
+import type { PromoSectionPropsType } from "@/types"
 
 
 export default function PromoSection({src,arrow,title,highlight,description,primaryBtn,secondaryBtn}:PromoSectionPropsType) {
   return (
 
    <div className="flex h-11/12 w-full mt-24 ">
-            <div className="relative h-full w-1/2 ">
-              <img src={src} alt={src} />
+            <div className="relative h-fit overflow-hidden w-1/2 ">
+              <img className="h-full" src={src} alt={src} />
             {arrow && 
              <img
              src={arrow}
@@ -40,7 +24,7 @@ export default function PromoSection({src,arrow,title,highlight,description,prim
                {title}{" "}
                 <span className="text-darkRed">{highlight}</span>
               </h1>
-              <p className="text-2xl font-semibold pt-7">
+              <p className="text-2xl font-normal pt-7">
                 {description}
               </p>
 

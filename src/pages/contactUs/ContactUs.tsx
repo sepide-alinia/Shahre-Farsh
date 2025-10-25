@@ -1,4 +1,4 @@
-import MainNavbar from '@/components/mainNavbar'
+import MainNavbar from '@/components/MainNavbar'
 import MainLayout from '@/layout/MainLayout'
 
 export default function ContactUs() {
