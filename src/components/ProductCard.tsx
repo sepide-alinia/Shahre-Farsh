@@ -6,6 +6,7 @@ type ProductCardType = {
   priceTag: string;
   img: string;
   description: string;
+  toPage : string;
 };
 
 export default function ProductCard({
@@ -14,9 +15,10 @@ export default function ProductCard({
   description,
   price,
   priceTag,
+  toPage
 }: ProductCardType) {
   return (
-    <div className="h-[493px] w-full flex flex-col  items-center rounded-2xl border border-[#D9D9D9]">
+    <div className="h-[550px] w-full flex flex-col  items-center rounded-2xl border border-[#D9D9D9]">
       <div className="  my-7 ">
         <img src={img} />
       </div>
@@ -30,7 +32,7 @@ export default function ProductCard({
           <p> : قیمت </p>
         </div>
         <div className="h-10">
-          <MainButton toPage={"/"} extraClass=" font-bold text-sm  ">
+          <MainButton toPage={`/Pdp/${id}`} extraClass=" font-bold text-sm  ">
             مشاهده بیشتر
           </MainButton>
         </div>

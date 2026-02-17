@@ -18,20 +18,30 @@ export type Product1 = {
 
 export type Product1Type = Product1[];
 
-export type PromoSectionPropsType ={
-src:string;
-arrow?:string;
-title: string;
-highlight: string;
-description: string;
-primaryBtn :{
+export type PromoSectionPropsType = {
+  src: string;
+  arrow?: string;
+  title: string;
+  highlight: string;
+  description: string;
+  extraClass1?: string;
+  extraClass2?: string;
+
+  primaryBtn: {
     toPage: string;
     extraClass?: string;
     text: string;
-}
-secondaryBtn? :{
+  };
+  secondaryBtn?: {
     toPage: string;
     extraClass?: string;
     text: string;
-}
+  };
+};
+
+export type Traits = {
+  quality: string;
+      shape: string;
+      bgColor: string;
+      provider: string;
 }

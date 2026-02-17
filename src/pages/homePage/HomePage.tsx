@@ -10,7 +10,6 @@ import { promo2Data } from "@/data/promoSectionData";
 import { category1Data } from "@/data/CategoryData";
 import { category2Data } from "@/data/CategoryData";
 import { useState } from "react";
-import Footer from "@/components/Footer";
 
 export default function HomePage() {
   const [ProductData1] = useState(Product1Data);
@@ -22,18 +21,12 @@ export default function HomePage() {
 
   return (
     <div>
-      <MainLayout>
-        <>
-          <MainNavbar />
           <PromoSection {...promoData1} />
           <CategoryGrid data={CategoryData1} />
           <ProductSection data={ProductData1} />
           <CategoryGrid data={CategoryData2} />
           <ProductSection data={ProductData2} />
           <PromoSection {...promoData2 } />
-          <Footer/>
-        </>
-      </MainLayout>
     </div>
   );
 }

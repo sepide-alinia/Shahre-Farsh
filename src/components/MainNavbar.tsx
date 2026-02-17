@@ -8,7 +8,7 @@ export default function MainNavbar() {
     { lable: "درباره ما", to: "/About" },
     { lable: " تماس با ما", to: "/Contact" },
     { lable: " وبلاگ", to: "/Weblog" },
-    { lable: " صفحه اصلی", to: "/" },
+    { lable: " صفحه اصلی", to: "/HomePage" },
   ];
 
   return (
@@ -29,7 +29,7 @@ export default function MainNavbar() {
             </div>
             <div>
               <h1 className="text-3xl text-darkRed w-32  font-black">
-                <Link to={"/"}>ایرانی فرش</Link>
+                <Link to={"/HomePage"}>ایرانی فرش</Link>
               </h1>
             </div>
           </div>
